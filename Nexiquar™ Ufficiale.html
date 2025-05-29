@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nexiquar™ – Il Futuro Dell' Innovazione</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body, html {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    background: #f5f7fa;
+    color: #1c1e21;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    text-decoration: none;
+    color: #0070f3;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #005bb5;
+  }
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 70px;
+    background: white;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    z-index: 10000;
+  }
+  header .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  header .logo img {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+  }
+  main {
+    margin-top: 70px;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+  }
+  .hero {
+    max-width: 700px;
+    margin-bottom: 3rem;
+  }
+  .hero img {
+    height: 70px;
+    margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-size: 3.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #111;
+    margin-bottom: 1rem;
+  }
+  .hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #4a4a4a;
+  }
+  .btn-primary {
+    padding: 0.85rem 2.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    background: #0070f3;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+  }
+  .btn-primary:hover, .btn-primary:focus {
+    background: #005bb5;
+  }
+  section.features {
+    background: white;
+    max-width: 900px;
+    margin: 4rem auto 2rem;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 2.5rem;
+    text-align: center;
+  }
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .feature-icon {
+    width: 56px;
+    height: 56px;
+    background: #0070f3;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    user-select: none;
+  }
+  .feature h3 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #111;
+  }
+  .feature p {
+    font-size: 1rem;
+    color: #555;
+  }
+  footer {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    color: #888;
+    background: #f8f9fb;
+  }
+
+  /* SLIDESHOW */
+  .slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 160px;
+    margin-bottom: 4rem;
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, #0070f3 0%, #00d4ff 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slide {
+    position: absolute;
+    width: 100%;
+    padding: 0 2rem;
+    font-size: 2.4rem;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.2;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    user-select: none;
+  }
+  .slide.active {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 {
+      font-size: 2.8rem;
+    }
+    .btn-primary {
+      width: 100%;
+      text-align: center;
+    }
+    .slideshow {
+      height: 140px;
+    }
+    .slide {
+      font-size: 1.8rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="Nexiquar Logo" />
+    <span style="font-weight: 800; font-size: 1.4rem; color:#0070f3;">Nexiquar™</span>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-label="Introduzione Nexiquar">
+    <img src="logo.png" alt="Icona Nexiquar" />
+      <h1>Nexiquar</h1>
+    <h1>Il Futuro Dell' Innovazione</h1>
+    <p>Nexiquar™ unisce tecnologia avanzata, design all’avanguardia e un’esperienza utente senza pari. Entra con noi nella nuova era digitale.</p>
+    <button class="btn-primary" onclick="alert('Prossimamente!')">Scopri di più</button>
+  </section>
+
+  <section class="slideshow" aria-label="Messaggi promozionali">
+    <div class="slide active">Innovazione che cambia il mondo.</div>
+    <div class="slide">Tecnologia semplice, potente e sicura.</div>
+    <div class="slide">La tua esperienza digitale, rivoluzionata.</div>
+  </section>
+
+  <section id="features" class="features" aria-label="Caratteristiche Nexiquar">
+    <article class="feature">
+      <div class="feature-icon">🔗</div>
+      <h3>Generatore QR Avanzato</h3>
+      <p>Crea codici QR per link, email, password WiFi, contatti e molto altro, con design personalizzati.</p>
+    </article>
+    <article class="feature">
+      <div class="feature-icon">🤖</div>
+      <h3>Intelligenza Artificiale</h3>
+      <p>Chatbot intelligenti, traduzioni multilingua e analisi avanzata dei dati integrati direttamente nella piattaforma.</p>
+    </article>
+    <article class="feature">
+      <div class="feature-icon">📦</div>
+      <h3>Gestione Prodotti</h3>
+      <p>Organizza, modifica e condividi i tuoi prodotti con sistemi integrati di scansione e stampa ricevute.</p>
+    </article>
+    <article class="feature">
+      <div class="feature-icon">⚡</div>
+      <h3>Esperienza Fluida</h3>
+      <p>Animazioni e interazioni avanzate per una navigazione moderna e senza attriti, su qualsiasi dispositivo.</p>
+    </article>
+  </section>
+
+  <section id="contact" style="max-width: 600px; margin: 4rem auto 8rem; padding: 0 2rem; text-align: center;">
+    <h2>Contattaci</h2>
+    <p>Scrivici a <a href="mailto:hello@nexiquar.com">nexiquar@gmail.com</a> per maggiori informazioni.</p>
+  </section>
+</main>
+
+<footer>
+  &copy; Nexiquar™ 2025 – Tutti i diritti riservati - Creato da Nexiquar™CompanyCorporation - Collabora con Google LLC - Alimentato con servizi di Google LLC
+</footer>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".hero img", {
+    opacity: 0,
+    y: 40,
+    duration: 1,
+    ease: "power3.out",
+  });
+  gsap.from(".hero h1", {
+    opacity: 0,
+    y: 60,
+    duration: 1,
+    delay: 0.3,
+    ease: "power3.out",
+  });
+  gsap.from(".hero p", {
+    opacity: 0,
+    y: 60,
+    duration: 1,
+    delay: 0.6,
+    ease: "power3.out",
+  });
+  gsap.from(".btn-primary", {
+    opacity: 0,
+    y: 60,
+    duration: 1,
+    delay: 0.9,
+    ease: "power3.out",
+  });
+
+  gsap.utils.toArray(".feature").forEach((feature) => {
+    gsap.from(feature, {
+      scrollTrigger: {
+        trigger: feature,
+        start: "top 85%",
+        toggleActions: "play none none none",
+      },
+      opacity: 0,
+      y: 40,
+      duration: 0.8,
+      ease: "power2.out",
+      stagger: 0.2,
+    });
+  });
+
+  // SLIDESHOW
+  const slides = document.querySelectorAll(".slide");
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
+    });
+  }
+
+  setInterval(() => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }, 4000);
+</script>
+
+</body>
+</html>
